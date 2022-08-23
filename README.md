@@ -1,6 +1,6 @@
 # adrian.pw blog post template
 
-*Note: This is a fork of [dfm](https://github.com/dfm)'s blog post template. You probably want to check out his template instead!*
+*Note: This is a fork of [dfm](https://github.com/dfm)'s blog post template. You probably want to check out [his template](https://github.com/dfm-io/template) instead!*
 
 These are mostly notes to self.
 
