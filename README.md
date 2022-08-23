@@ -1,13 +1,20 @@
-# dfm.io blog post template
+# adrian.pw blog post template
 
-These are mostly notes to self. To see the published blog, go to [dfm.io](https://dfm.io).
+*Note: This is a fork of [dfm](https://github.com/dfm)'s blog post template. You probably want to check out his template instead!*
+
+These are mostly notes to self.
 
 ## Creating a new repo
 
-To create a new post, install [copier](https://copier.readthedocs.io) then run:
-
+To create a new post, install [copier](https://copier.readthedocs.io):
 ```bash
-copier gh:dfm-io/template post--URL_SLUG_FOR_POST
+python -m pip install pipx
+pipx install copier
+```
+
+then run:
+```bash
+copier gh:adrn-blog/template post--URL_SLUG_FOR_POST
 cd post--URL_SLUG_FOR_POST
 git init .
 python -m pip install pre-commit
@@ -16,7 +23,9 @@ git add .
 git commit -am "Initial commit"
 ```
 
-Where `URL_SLUG_FOR_POST` is (gasp!) the URL slug for this post. Then the tradition is for this to be committed to a repo called `post--URL_SLUG_FOR_POST` under the `dfm-io` organization.
+Where `URL_SLUG_FOR_POST` is the URL slug for this post. Then the tradition is for this
+to be committed to a repo called `post--URL_SLUG_FOR_POST` under the `adrn-blog`
+organization.
 
 ## Setting up Python environment
 
