@@ -23,9 +23,13 @@ git add .
 git commit -am "Initial commit"
 ```
 
-Where `URL_SLUG_FOR_POST` is the URL slug for this post. Then the tradition is for this
-to be committed to a repo called `post--URL_SLUG_FOR_POST` under the `adrn-blog`
-organization.
+This should push to a remote repo called `post--URL_SLUG_FOR_POST` under the `adrn-blog`
+organization. [Create a new empty repository](https://github.com/organizations/adrn-blog/repositories/new) with the same name (post--URL_SLUG) (i.e., don't check any boxes!), and:
+```bash
+git remote add origin git@github.com:adrn-blog/post--URL_SLUG.git
+git branch -M main
+git push -u origin main
+```
 
 ## Setting up Python environment
 
