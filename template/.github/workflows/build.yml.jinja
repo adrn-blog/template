@@ -9,7 +9,7 @@ on:
 jobs:
   execute:
     runs-on: ubuntu-latest
-    concurrency: post-${{ github.ref }}
+    concurrency: post-{% raw %}${{ github.ref }}{% endraw %}
     steps:
       - uses: adrn-blog/execute-post@main
         with:
