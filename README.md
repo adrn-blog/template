@@ -14,7 +14,7 @@ pipx install copier
 
 then run:
 ```bash
-copier gh:adrn-blog/template post--URL_SLUG_FOR_POST
+copier copy gh:adrn-blog/template post--URL_SLUG_FOR_POST
 cd post--URL_SLUG_FOR_POST
 git init .
 python -m pip install pre-commit
