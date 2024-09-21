@@ -6,7 +6,7 @@ _skip_if_exists:
 
 year:
   type: int
-  help: The year of publication (e.g. 2022)
+  help: The year of publication (e.g. 2024)
 
 month:
   type: int
@@ -27,5 +27,5 @@ slug:
 
 python_version:
   type: str
-  default: "3.9"
+  default: "3.12"
   help: The Python version to use
