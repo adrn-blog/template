@@ -1,0 +1,17 @@
+[project]
+name = "{{slug}}"
+version = "0.0.0"
+requires-python = "=={{python_version}}"
+dependencies = [
+    "jupyter",
+    "ipykernel",
+    "nbconvert",
+    "notebook",
+    "pre-commit",
+    # Add in any dependencies you need for the blog post here, for example:
+    # "matplotlib",
+    # "numpy",
+    # "scipy",
+]
+
+[tool.uv.workspace]
