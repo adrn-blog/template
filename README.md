@@ -16,15 +16,18 @@ then run:
 ```bash
 copier copy gh:adrn-blog/template post--URL_SLUG_FOR_POST
 cd post--URL_SLUG_FOR_POST
+uv venv
+uv sync
 git init .
-python -m pip install pre-commit
-pre-commit install
+uv run pre-commit install
 git add .
 git commit -am "Initial commit"
 ```
 
-This should push to a remote repo called `post--URL_SLUG_FOR_POST` under the `adrn-blog`
-organization. [Create a new empty repository](https://github.com/organizations/adrn-blog/repositories/new) with the same name (post--URL_SLUG) (i.e., don't check any boxes!), and:
+We then want to push this blog post repo to a remote called `post--URL_SLUG_FOR_POST`
+under the `adrn-blog` organization. [Create a new empty
+repository](https://github.com/organizations/adrn-blog/repositories/new) with the same
+name (post--URL_SLUG) (i.e. don't check any boxes!), and:
 ```bash
 git remote add origin git@github.com:adrn-blog/post--URL_SLUG.git
 git branch -M main
@@ -33,19 +36,10 @@ git push -u origin main
 
 ## Setting up Python environment
 
-To set up your environment, in the root directory of the post repo, run:
-
+Your python environment is managed by `uv`, so you should be all set up after the
+commands above. If you want to add a dependency, add it to the `pyproject.toml` file
+under "dependencies" and then run:
 ```bash
-python -m venv env
-source env/bin/activate
-python -m pip install -U pip
-python -m pip install -U pip-tools
-python -m piptools sync
+uv sync
 ```
-
-To add new dependencies, add them to `requirements.in` then run
-
-```bash
-python -m piptools compile
-python -m piptools sync
-```
+to update the environment.
